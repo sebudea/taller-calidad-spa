@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="navegacion del menu de SauceDemo" skipped="2" tests="3" time="0.57" timestamp="2025-07-08 10:14:37"><testcase name="navegacion exitosa a la seccion about"><failure message="Expected validation about option&#10;Expected: is &lt;true&gt;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">Expected validation about option
-Expected: is &lt;true&gt;
-     but: was &lt;false&gt;</failure><system-err>Expected validation about option
-Expected: is &lt;true&gt;
-     but: was &lt;false&gt;&#13;
-co.edu.udea.certificacion.menu.stepdefinitions.MenuNavigationStepDefinition.puedoVerLaSeccionAbout(MenuNavigationStepDefinition.java:40)&#13;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="navegacion del menu de SauceDemo" skipped="2" tests="3" time="0.57" timestamp="2025-07-08 10:28:33"><testcase name="navegacion exitosa a la seccion about"><failure message="&#10;Expected: an element that is clickable&#10;     but: no matching element found by [Opcion about located with: xpath: //a[@id='about_sidebar_link']] was not clicked" type="java.lang.AssertionError">
+Expected: an element that is clickable
+     but: no matching element found by [Opcion about located with: xpath: //a[@id='about_sidebar_link']] was not clicked</failure><system-err>
+Expected: an element that is clickable
+     but: no matching element found by [Opcion about located with: xpath: //a[@id='about_sidebar_link']] was not clicked&#13;
+co.edu.udea.certificacion.menu.interactions.SelectAboutOption.performAs(SelectAboutOption.java:13)&#13;
+co.edu.udea.certificacion.menu.tasks.NavigateToAbout.performAs(NavigateToAbout.java:19)&#13;
+co.edu.udea.certificacion.menu.stepdefinitions.MenuNavigationStepDefinition.abroElMenuYSeleccionoAbout(MenuNavigationStepDefinition.java:33)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
 </system-err></testcase><testcase name="Cerrar sesion exitosamente desde el menu"><skipped/></testcase><testcase name="Reiniciar estado de la app desde el menu"><skipped/></testcase></testsuite>

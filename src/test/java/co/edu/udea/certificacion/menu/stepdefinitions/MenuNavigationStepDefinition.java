@@ -1,11 +1,13 @@
 package co.edu.udea.certificacion.menu.stepdefinitions;
 
-import co.edu.udea.certificacion.menu.interactions.SelectAboutOption;
 import co.edu.udea.certificacion.menu.questions.ValidationAboutOption;
+import co.edu.udea.certificacion.menu.questions.ValidationLoginPage;
+import co.edu.udea.certificacion.menu.questions.ValidationResetAppState;
 import co.edu.udea.certificacion.menu.tasks.LoginToSauceDemo;
 import co.edu.udea.certificacion.menu.tasks.NavigateToAbout;
+import co.edu.udea.certificacion.menu.tasks.NavigateToLogout;
+import co.edu.udea.certificacion.menu.tasks.NavigateToResetAppState;
 import io.cucumber.java.Before;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
@@ -39,6 +41,34 @@ public class MenuNavigationStepDefinition {
     public void puedoVerLaSeccionAbout() {
         theActorInTheSpotlight().should(
                 seeThat(ValidationAboutOption.onPage())
+        );
+    }
+
+    @When("abro el menu y selecciono la opcion Logout")
+    public void abroElMenuYSeleccionoLogout() {
+        theActorInTheSpotlight().attemptsTo(
+                NavigateToLogout.navigateToLogout()
+        );
+    }
+
+    @Then("debo volver a la pagina de inicio de sesion")
+    public void deboVolverALaPaginaDeInicioDeSesion() {
+        theActorInTheSpotlight().should(
+                seeThat(ValidationLoginPage.onPage())
+        );
+    }
+
+    @When("abro el menu y selecciono la opcion Reset App State")
+    public void abroElMenuYSeleccionoResetAppState() {
+        theActorInTheSpotlight().attemptsTo(
+                NavigateToResetAppState.navigateToResetAppState()
+        );
+    }
+
+    @Then("el carrito debe estar vacio y los botones de los productos deben estar en Add to cart")
+    public void elCarritoDebeEstarVacioYLosBotonesDebenEstarEnAddToCart() {
+        theActorInTheSpotlight().should(
+                seeThat(ValidationResetAppState.onPage())
         );
     }
 }

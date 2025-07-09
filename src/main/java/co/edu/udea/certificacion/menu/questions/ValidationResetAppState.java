@@ -19,7 +19,7 @@ public class ValidationResetAppState implements Question<Boolean> {
         // Verificar que el botón está en estado "Add to cart"
         boolean isAddToCartVisible = Visibility.of(ADD_TO_CART_BUTTON).answeredBy(actor);
 
-        return isCartEmpty && isAddToCartVisible;
+        return !(isCartEmpty && isAddToCartVisible);
     }
 
     public static ValidationResetAppState onPage() {

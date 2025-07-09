@@ -7,6 +7,7 @@ import co.edu.udea.certificacion.menu.tasks.LoginToSauceDemo;
 import co.edu.udea.certificacion.menu.tasks.NavigateToAbout;
 import co.edu.udea.certificacion.menu.tasks.NavigateToLogout;
 import co.edu.udea.certificacion.menu.tasks.NavigateToResetAppState;
+import co.edu.udea.certificacion.menu.interactions.AddProductToCart;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -58,9 +59,10 @@ public class MenuNavigationStepDefinition {
         );
     }
 
-    @When("abro el menu y selecciono la opcion Reset App State")
-    public void abroElMenuYSeleccionoResetAppState() {
+    @When("agrego un producto al carrito y abro el menu y selecciono la opcion Reset App State")
+    public void agregoProductoYSeleccionoResetAppState() {
         theActorInTheSpotlight().attemptsTo(
+                AddProductToCart.addProductToCart(),
                 NavigateToResetAppState.navigateToResetAppState()
         );
     }

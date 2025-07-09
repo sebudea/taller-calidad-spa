@@ -16,5 +16,5 @@ Feature: navegacion del menu de SauceDemo
 
   Scenario: Reiniciar estado de la app desde el menu
     Given que he iniciado sesion como usuario estandar
-    When abro el menu y selecciono la opcion Reset App State
+    When agrego un producto al carrito y abro el menu y selecciono la opcion Reset App State
     Then el carrito debe estar vacio y los botones de los productos deben estar en Add to cart

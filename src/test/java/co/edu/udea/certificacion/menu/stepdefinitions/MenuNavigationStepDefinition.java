@@ -19,55 +19,55 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 public class MenuNavigationStepDefinition {
 
-    private static final String ACTOR_NAME = "cliente";
-    private Actor cliente;
+    private static final String ACTOR_NAME = "usuario";
+    private Actor usuario;
 
     @Before
     public void setTheStage() {
         OnStage.setTheStage(new OnlineCast());
-        cliente = OnStage.theActorCalled(ACTOR_NAME);
+        usuario = OnStage.theActorCalled(ACTOR_NAME);
     }
 
     @Given("que he iniciado sesion como usuario estandar")
     public void queHeIniciadoSesionComoUsuarioEstandar() {
-        cliente.attemptsTo(
+        usuario.attemptsTo(
                 LoginToSauceDemo.loginToSauceDemo());
     }
 
     @When("abro el menu y selecciono la opcion About")
     public void abroElMenuYSeleccionoAbout() {
-        cliente.attemptsTo(
+        usuario.attemptsTo(
                 NavigateToAbout.navigateToAbout());
     }
 
     @Then("puedo ver la seccion About")
     public void puedoVerLaSeccionAbout() {
-        cliente.should(
+        usuario.should(
                 seeThat(ValidationAboutOption.onPage()));
     }
 
     @When("abro el menu y selecciono la opcion Logout")
     public void abroElMenuYSeleccionoLogout() {
-        cliente.attemptsTo(
+        usuario.attemptsTo(
                 NavigateToLogout.navigateToLogout());
     }
 
     @Then("debo volver a la pagina de inicio de sesion")
     public void deboVolverALaPaginaDeInicioDeSesion() {
-        cliente.should(
+        usuario.should(
                 seeThat(ValidationLoginPage.onPage()));
     }
 
     @When("agrego un producto al carrito y abro el menu y selecciono la opcion Reset App State")
     public void agregoProductoYSeleccionoResetAppState() {
-        cliente.attemptsTo(
+        usuario.attemptsTo(
                 AddProductToCart.addProductToCart(),
                 NavigateToResetAppState.navigateToResetAppState());
     }
 
     @Then("el carrito debe estar vacio y los botones de los productos deben estar en Add to cart")
     public void elCarritoDebeEstarVacioYLosBotonesDebenEstarEnAddToCart() {
-        cliente.should(
+        usuario.should(
                 seeThat(ValidationResetAppState.onPage()));
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="navegacion del menu de SauceDemo" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-07-09T04:15:44" hostname="DESKTOP-ROM5H95" time="18.865">
+<testsuite name="navegacion del menu de SauceDemo" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-07-11T04:02:34" hostname="DESKTOP-ROM5H95" time="33.045">
   <properties/>
-  <testcase name="navegacion exitosa a la seccion about" classname="navegacion del menu de SauceDemo" time="6.625"/>
-  <testcase name="Cerrar sesion exitosamente desde el menu" classname="navegacion del menu de SauceDemo" time="1.187"/>
-  <testcase name="Reiniciar estado de la app desde el menu" classname="navegacion del menu de SauceDemo" time="11.053"/>
+  <testcase name="navegacion exitosa a la seccion about" classname="navegacion del menu de SauceDemo" time="13.421"/>
+  <testcase name="Cerrar sesion exitosamente desde el menu" classname="navegacion del menu de SauceDemo" time="4.553"/>
+  <testcase name="Reiniciar estado de la app desde el menu" classname="navegacion del menu de SauceDemo" time="15.071"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Test worker] INFO  - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
@@ -15,10 +15,10 @@ navegacion exitosa a la seccion about(navegacion-del-menu-de-saucedemo;navegacio
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu, --remote-allow-origins=*], extensions: []}, unhandledPromptBehavior: ignore}
-jul. 08, 2025 11:15:46 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 137
-jul. 08, 2025 11:15:46 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 137.0.7151.120. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+jul. 10, 2025 11:02:37 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+jul. 10, 2025 11:02:37 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.98. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO  - ?[92m
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
  |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
